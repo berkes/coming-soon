@@ -19,4 +19,5 @@ group :development do
   gem 'sqlite3'
   gem 'shotgun'
   gem 'capistrano'
+  gem 'capistrano-bundler'
 end
