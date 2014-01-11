@@ -19,6 +19,10 @@ GEM
     arel (4.0.1)
     atomic (1.1.14)
     builder (3.1.4)
+    capistrano (3.0.1)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (>= 0.0.23)
     capybara (2.2.0)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -40,11 +44,15 @@ GEM
       multi_json (~> 1.3)
     highline (1.6.20)
     i18n (0.6.9)
+    kgio (2.8.1)
     mime-types (2.0)
     mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.8.2)
     multi_test (0.0.2)
+    net-scp (1.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.7.0)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     rack (1.5.2)
@@ -52,6 +60,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    raindrops (0.12.0)
     rake (10.1.0)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
@@ -68,14 +77,25 @@ GEM
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
     sqlite3 (1.3.8)
+    sshkit (1.3.0)
+      net-scp (>= 1.1.2)
+      net-ssh
+      term-ansicolor
     templater (1.0.0)
       diff-lcs (>= 1.1.2)
       extlib (>= 0.9.5)
       highline (>= 1.4.0)
+    term-ansicolor (1.2.2)
+      tins (~> 0.8)
     thread_safe (0.1.3)
       atomic
     tilt (1.4.1)
+    tins (0.13.1)
     tzinfo (0.3.38)
+    unicorn (4.7.0)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -84,6 +104,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (= 4.0.2)
+  capistrano
   capybara
   cucumber
   cucumber-sinatra
@@ -94,3 +115,4 @@ DEPENDENCIES
   shotgun
   sinatra
   sqlite3
+  unicorn
