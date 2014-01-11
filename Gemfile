@@ -7,6 +7,9 @@ gem 'activerecord', '4.0.2'
 
 gem 'unicorn'
 
+group :production do
+  gem 'mysql2'
+end
 group :test do
   gem 'database_cleaner'
   gem 'capybara'
