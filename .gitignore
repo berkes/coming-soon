@@ -3,3 +3,4 @@ config.yml
 database.yml
 .bundle
 vendor/bundle/
+db/*sqlite3
