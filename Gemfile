@@ -1,8 +1,11 @@
 source 'http://rubygems.org'
 
+gem 'rake'
 gem 'sinatra'
 gem 'rack'
 gem 'activerecord', '4.0.2'
+
+gem 'unicorn'
 
 group :test do
   gem 'database_cleaner'
@@ -15,4 +18,5 @@ end
 group :development do
   gem 'sqlite3'
   gem 'shotgun'
+  gem 'capistrano'
 end
